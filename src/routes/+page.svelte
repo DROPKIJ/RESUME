@@ -211,7 +211,7 @@
     justify-content: center;
   }
   .name-box {
-    background-color: #69dcff;
+    background-color: #36a5c7;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -269,6 +269,7 @@
   }
   .work-projects, .personal-projects, .uni-projects {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
     height: 100%;
@@ -295,10 +296,22 @@
     align-items: center;
     gap: 15px;
   }
-  .fps-gif, .music-matrix-gif, .uni-gif {
-    width: 100%;
+  .fps-gif {
+    max-height: 500px;
+    display: block;
+    object-fit: contain;
+  }
+  .music-matrix-gif {
+    max-width: 460px;
     height: auto;
     display: block;
+    object-fit: contain;
+  }
+  .uni-gif {
+    max-width: 510px;
+    height: auto;
+    display: block;
+    object-fit: contain;
   }
   .project-details {
     flex: 1;
