@@ -258,14 +258,13 @@
     border-radius: 5px;
   }
   .work-projects-container {
-    width: 1300px;
+    max-width: 1300px;
   }
   .personal-projects-container {
-    width: 1000px;
-    height: auto;
+    max-width: 1000px;
   }
   .uni-projects-container {
-    width: 1100px;
+    max-width: 1100px;
   }
   .work-projects, .personal-projects, .uni-projects {
     display: flex;
@@ -288,7 +287,6 @@
     flex: 2;
     justify-content: space-between;
     align-items: center;
-    overflow-x: auto;
   }
   .personal-interface, .uni-interface {
     flex-direction: column;
@@ -318,7 +316,6 @@
     background-color: #555;
     padding: 15px;
     border-radius: 5px;
-    overflow-y: auto;
     text-align: left;
   }
   .project-details h2 {
