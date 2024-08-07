@@ -211,7 +211,7 @@
     justify-content: center;
   }
   .name-box {
-    background-color: #69dcff;
+    background-color: #36a5c7;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -258,17 +258,17 @@
     border-radius: 5px;
   }
   .work-projects-container {
-    width: 1300px;
+    max-width: 1300px;
   }
   .personal-projects-container {
-    width: 1000px;
-    height: auto;
+    max-width: 1000px;
   }
   .uni-projects-container {
-    width: 1100px;
+    max-width: 1100px;
   }
   .work-projects, .personal-projects, .uni-projects {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
     height: 100%;
@@ -287,7 +287,6 @@
     flex: 2;
     justify-content: space-between;
     align-items: center;
-    overflow-x: auto;
   }
   .personal-interface, .uni-interface {
     flex-direction: column;
@@ -295,17 +294,28 @@
     align-items: center;
     gap: 15px;
   }
-  .fps-gif, .music-matrix-gif, .uni-gif {
-    width: 100%;
+  .fps-gif {
+    max-height: 500px;
+    display: block;
+    object-fit: contain;
+  }
+  .music-matrix-gif {
+    max-width: 460px;
     height: auto;
     display: block;
+    object-fit: contain;
+  }
+  .uni-gif {
+    max-width: 510px;
+    height: auto;
+    display: block;
+    object-fit: contain;
   }
   .project-details {
     flex: 1;
     background-color: #555;
     padding: 15px;
     border-radius: 5px;
-    overflow-y: auto;
     text-align: left;
   }
   .project-details h2 {
