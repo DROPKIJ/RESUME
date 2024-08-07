@@ -99,6 +99,17 @@
   let headerText = "Click here to change project type | Click projects to cycle through [Work Projects only has 1]";
 </script>
 
+<svelte:head>
+  <link rel="preload" href="/FPS.gif" as="image">
+  <link rel="preload" href="/FPS1.gif" as="image">
+  <link rel="preload" href="/FPS2.gif" as="image">
+  <link rel="preload" href="/musicMatrix.gif" as="image">
+  <link rel="preload" href="/musicMatrix2.gif" as="image">
+  <link rel="preload" href="/Boxes.gif" as="image">
+  <link rel="preload" href="/LoopMania.gif" as="image">
+  <link rel="preload" href="/FuryofDracula.gif" as="image">
+</svelte:head>
+
 <main>
   <header class="top-bar">
     <button 
@@ -144,7 +155,7 @@
           <div class="personal-projects">
             <div class="personal-interface">
               {#each projects.personal[$currentProjectIndex.personal].images as image}
-                <img src={image} alt="Personal Project Interface" class="music-matrix-gif" loading="lazy" />
+                <img src={image} alt="Personal Project Interface" class="music-matrix-gif" loading="eager" />
               {/each}
             </div>
             <div class="project-details">
@@ -161,7 +172,7 @@
           <div class="uni-projects">
             <div class="uni-interface">
               {#each projects.uni[$currentProjectIndex.uni].images as image}
-                <img src={image} alt="Uni Project Interface" class="uni-gif" loading="lazy" />
+                <img src={image} alt="Uni Project Interface" class="uni-gif" loading="eager" />
               {/each}
             </div>
             <div class="project-details">
@@ -219,7 +230,6 @@
     align-items: flex-end;
     text-align: right;
   }
-
   .email {
     font-size: 0.8em;
     margin-top: 5px;
